@@ -4,10 +4,17 @@ const StatefulForm = () => {
     const [name, setName] = useState('Mr.Bond')
     const [password, setPassword] = useState(null)
     const [number, setNumber] = useState(null)
+    const [error, setError] = useState('')
 
     const handleForm = e => {
         e.preventDefault()
-        console.log(name, password, number);
+        if (password.length < 6) {
+            setError('Passwords must be 6 characters or longer')
+        }
+        else {
+            setError('');
+            console.log(name, password, number);
+        }
     }
     const handleNameChange = e => {
         setName(e.target.value)
@@ -34,6 +41,7 @@ const StatefulForm = () => {
 
                 <input type="submit" value="Submit" />
             </form>
+            {error && <p style={{ color: 'red', fontWeight: 'bold', fontSize: '30px' }}>{error}!</p>}
         </div>
     );
 };
