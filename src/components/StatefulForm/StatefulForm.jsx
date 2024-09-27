@@ -34,6 +34,7 @@ const StatefulForm = () => {
                 <br />
 
                 <input onChange={handlePasswordChange} type="password" name="pass" id="password" placeholder="Password" />
+                {error && <p style={{ color: 'red', margin: '0', fontSize: '30px' }}>{error}!</p>}
                 <br />
 
                 <input onChange={handleNumberChange} type="text" name="number" id="number" placeholder="Number" />
@@ -41,7 +42,6 @@ const StatefulForm = () => {
 
                 <input type="submit" value="Submit" />
             </form>
-            {error && <p style={{ color: 'red', fontWeight: 'bold', fontSize: '30px' }}>{error}!</p>}
         </div>
     );
 };
