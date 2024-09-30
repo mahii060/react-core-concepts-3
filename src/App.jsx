@@ -18,11 +18,11 @@ function App() {
 
   return (
     <>
-      <Grandpa></Grandpa>
+      {/* <Grandpa></Grandpa> */}
       {/* <HookForm /> */}
       {/* <RefForm /> */}
       {/* <StatefulForm /> */}
-      {/* <SimpleForm /> */}
+      <SimpleForm />
       {/* <ReusableForm
         formTitle="Sign Up"
         handleSubmit={handleSignUpSubmit}
