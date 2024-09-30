@@ -1,5 +1,6 @@
 
 import './App.css'
+import Grandpa from './components/Grandpa/Grandpa'
 import HookForm from './components/HookForm/HookForm'
 import RefForm from './components/RefForm/RefForm'
 import ReusableForm from './components/ReusableForm/ReusableForm'
@@ -17,13 +18,12 @@ function App() {
 
   return (
     <>
-
-      <h1>Form Master</h1>
+      <Grandpa></Grandpa>
       {/* <HookForm /> */}
       {/* <RefForm /> */}
       {/* <StatefulForm /> */}
       {/* <SimpleForm /> */}
-      <ReusableForm
+      {/* <ReusableForm
         formTitle="Sign Up"
         handleSubmit={handleSignUpSubmit}
         btnText="Submit">
@@ -40,7 +40,7 @@ function App() {
           <h2>Update</h2>
           <p>Please Update your profile to stay update</p>
         </div>
-      </ReusableForm>
+      </ReusableForm> */}
     </>
   )
 }
